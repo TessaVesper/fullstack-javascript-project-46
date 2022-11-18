@@ -73,5 +73,5 @@ export const genDiff = (filepath1, filepath2) => {
     const obj1 = JSON.parse(getFilePath(filepath1));
     const obj2 = JSON.parse(getFilePath(filepath2));
     const compared = stringify(compareFiles(obj1, obj2))
-    console.log(compared)
-  }
+    console.log(compared);
+  };
