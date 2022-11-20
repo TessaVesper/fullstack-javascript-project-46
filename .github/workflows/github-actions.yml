@@ -1,4 +1,4 @@
-name: genDiff-test
+name: Github Actions
 
 on: push
 
