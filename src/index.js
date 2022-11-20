@@ -75,3 +75,5 @@ export const genDiff = (filepath1, filepath2) => {
     const compared = stringify(compareFiles(obj1, obj2))
     console.log(compared);
   };
+
+  export default genDiff;
