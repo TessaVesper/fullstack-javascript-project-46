@@ -54,13 +54,13 @@ const stringify = (obj) => {
     const typeObj = el.type;
     switch (typeObj) {
       case 'deleted':
-        return `- ${el.key}: ${el.value}`;
+        return `  - ${el.key}: ${el.value}`;
       case 'same':
-        return `  ${el.key}: ${el.value}`;
+        return `    ${el.key}: ${el.value}`;
       case 'diffValue':
-        return `- ${el.key}: ${el.value1}\n+ ${el.key}: ${el.value2}`;
+        return `  - ${el.key}: ${el.value1}\n  + ${el.key}: ${el.value2}`;
       case 'added':
-        return `+ ${el.key}: ${el.value}`;
+        return `  + ${el.key}: ${el.value}`;
       default:
         return null;
     }
@@ -74,6 +74,7 @@ export const genDiff = (filepath1, filepath2) => {
     const obj2 = JSON.parse(getFilePath(filepath2));
     const compared = stringify(compareFiles(obj1, obj2))
     console.log(compared);
+    return compared;
   };
 
   export default genDiff;
